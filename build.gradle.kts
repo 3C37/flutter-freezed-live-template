@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.dhh"
-version = "1.0.1"
+version = "1.0.2"
 
 repositories {
     mavenCentral()
@@ -26,10 +26,11 @@ intellijPlatform {
     pluginConfiguration {
         ideaVersion {
             sinceBuild = "233"
+            untilBuild = "251.*"
         }
 
         changeNotes = """
-      Change target version to 2023.3
+      Lowered minimum required IDE version to 2023.3 (Build 233) for better backward compatibility.
     """.trimIndent()
     }
 }

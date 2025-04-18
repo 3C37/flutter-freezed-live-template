@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.dhh"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     mavenCentral()
@@ -16,20 +16,20 @@ repositories {
 
 dependencies {
     intellijPlatform {
-        create("IC", "2025.1")
+        create("IC", "2023.3")
         testFramework(org.jetbrains.intellij.platform.gradle.TestFrameworkType.Platform)
-        plugins("Dart:251.25267", "io.flutter:85.2.4", "org.jetbrains.android:251.23774.460")
+        plugins("Dart:233.11799.172", "io.flutter:77.0.1", "org.jetbrains.android:233.11799.6")
     }
 }
 
 intellijPlatform {
     pluginConfiguration {
         ideaVersion {
-            sinceBuild = "243"
+            sinceBuild = "233"
         }
 
         changeNotes = """
-      Initial version
+      Change target version to 2023.3
     """.trimIndent()
     }
 }

@@ -7,7 +7,7 @@
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
     <name>Flutter Freezed Live Template</name>
 
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
     <vendor url="https://github.com/3C37">3C37</vendor>
 
@@ -28,7 +28,7 @@
 
     <change-notes>Initial release</change-notes>
 
-    <idea-version since-build="243.24978" until-build="243.*" />
+    <idea-version since-build="233.*" until-build="251.*" />
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->

@@ -1,0 +1,1 @@
+rootProject.name = "flutter_freezed_live_template"

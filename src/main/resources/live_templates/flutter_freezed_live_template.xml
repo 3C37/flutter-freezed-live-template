@@ -1,0 +1,16 @@
+<templateSet group="Flutter freezed snippets">
+  <template name="frzd" value="import 'package:freezed_annotation/freezed_annotation.dart';&#10;&#10;part '$FILENAME$.freezed.dart';&#10;&#10;@freezed&#10;class $CLASS_NAME$ with _$$$CLASS_NAME$ {&#10;    const factory $CLASS_NAME$({&#10;            &#10;    }) = _$CLASS_NAME$;&#10;    &#10;    const $CLASS_NAME$._();&#10;    &#10;    factory $CLASS_NAME$.initial() =&gt; const $CLASS_NAME$();&#10;}" description="New Freezed Class" toReformat="false" toShortenFQNames="true">
+    <variable name="FILENAME" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
+    <variable name="CLASS_NAME" expression="capitalize(camelCase(fileNameWithoutExtension())" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="frzdmodel" value="import 'package:freezed_annotation/freezed_annotation.dart';&#10;&#10;part '$FILENAME$.freezed.dart';&#10;part '$FILENAME$.g.dart';&#10;&#10;@freezed&#10;class $CLASS_NAME$ with _$$$CLASS_NAME$ {&#10;    const factory $CLASS_NAME$({&#10;            &#10;    }) = _$CLASS_NAME$;&#10;    &#10;    const $CLASS_NAME$._();&#10;    &#10;    factory $CLASS_NAME$.initial() =&gt; const $CLASS_NAME$();&#10;    &#10;    factory $CLASS_NAME$.fromJson(Map&lt;String, dynamic&gt; json) =&gt; _$$$CLASS_NAME$FromJson(json);&#10;}" description="New Freezed Model" toReformat="false" toShortenFQNames="true">
+    <variable name="FILENAME" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
+    <variable name="CLASS_NAME" expression="capitalize(camelCase(fileNameWithoutExtension())" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+</templateSet>

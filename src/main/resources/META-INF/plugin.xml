@@ -7,23 +7,30 @@
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
     <name>Flutter Freezed Live Template</name>
 
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
     <vendor url="https://github.com/3C37">3C37</vendor>
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-    <p>Provides convenient Live Templates for creating Flutter <a href="https://pub.dev/packages/freezed">freezed</a> data classes and models quickly with <a href="https://pub.dev/packages/freezed_annotation">freezed_annotation</a> and <a href="https://pub.dev/packages/json_serializable">json_serializable</a>.</p>
-    <br>
-    <h2>frzd</h2>
-    <p>Creates a basic Freezed class structure with part directives for <code>.freezed.dart</code>.</p>
-    <br>
-    <h2>frzdmodel</h2>
-    <p>Creates a Freezed class structure with part directives for <code>.freezed.dart</code> and <code>.g.dart</code> (for json_serializable), and a <code>fromJson</code> factory.</p>
+      <p>Provides convenient <strong>Live Templates</strong> for creating Flutter <a href="https://pub.dev/packages/freezed">freezed</a> data classes and models quickly with <a href="https://pub.dev/packages/freezed_annotation">freezed_annotation</a> and <a href="https://pub.dev/packages/json_serializable">json_serializable</a>.</p>
+      <br>
+      <p><strong>NEW:</strong> Now includes automatic <strong>File Nesting</strong> to group generated <code>.freezed.dart</code> and <code>.g.dart</code> files under their parent <code>.dart</code> file.</p>
+      <br>
+      <h2>frzd</h2>
+      <p>Creates a basic Freezed class structure with part directives for <code>.freezed.dart</code>.</p>
+      <br>
+      <h2>frzdmodel</h2>
+      <p>Creates a Freezed class structure with part directives for <code>.freezed.dart</code> and <code>.g.dart</code> (for json_serializable), and a <code>fromJson</code> factory.</p>
   ]]></description>
 
-    <change-notes>Lowered minimum required IDE version to 2023.3 (Build 233) for better backward compatibility.</change-notes>
+    <change-notes><![CDATA[
+      <h3>Version 1.0.3</h3>
+      <ul>
+        <li>Added automatic File Nesting for Freezed generated files (<code>.freezed.dart</code>, <code>.g.dart</code>).</li>
+      </ul>
+  ]]></change-notes>
 
     <idea-version since-build="233" until-build="251.*" />
 
@@ -38,5 +45,6 @@
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
         <defaultLiveTemplates file="live_templates/flutter_freezed_live_template.xml"/>
+        <projectViewNestingRulesProvider implementation="com.dhh.flutter_freezed_live_template.nesting.FlutterNestingRulesProvider"/>
     </extensions>
 </idea-plugin>

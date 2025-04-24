@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.dhh"
-version = "1.0.2"
+version = "1.0.3"
 
 repositories {
     mavenCentral()
@@ -30,7 +30,11 @@ intellijPlatform {
         }
 
         changeNotes = """
-      Lowered minimum required IDE version to 2023.3 (Build 233) for better backward compatibility.
+            Version 1.0.3
+            
+            Added automatic File Nesting for Freezed generated files
+            - .freezed.dart
+            - .g.dart
     """.trimIndent()
     }
 }

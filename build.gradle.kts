@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     id("java")
-    id("org.jetbrains.kotlin.jvm") version "1.9.25"
+    id("org.jetbrains.kotlin.jvm") version "2.0.0"
     id("org.jetbrains.intellij.platform") version "2.3.0"
 }
 
@@ -25,10 +25,16 @@ dependencies {
 }
 
 intellijPlatform {
+    pluginVerification {
+        ides {
+            recommended()
+        }
+    }
+
     pluginConfiguration {
         ideaVersion {
             sinceBuild = "233"
-            untilBuild = "251.*"
+            untilBuild = "252.*"
         }
 
         changeNotes = """
@@ -41,13 +47,13 @@ intellijPlatform {
 
 tasks {
     withType<JavaCompile> {
-        sourceCompatibility = "21"
-        targetCompatibility = "21"
+        sourceCompatibility = "17"
+        targetCompatibility = "17"
     }
 
     kotlin {
         compilerOptions {
-            jvmTarget.set(JvmTarget.JVM_21)
+            jvmTarget.set(JvmTarget.JVM_17)
         }
     }
 }

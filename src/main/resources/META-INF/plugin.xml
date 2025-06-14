@@ -32,7 +32,7 @@
       </ul>
   ]]></change-notes>
 
-    <idea-version since-build="233" until-build="251.*" />
+    <idea-version since-build="233" until-build="252.*" />
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->

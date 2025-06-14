@@ -7,7 +7,7 @@
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
     <name>Flutter Freezed Live Template</name>
 
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
     <vendor url="https://github.com/3C37">3C37</vendor>
 
@@ -26,9 +26,9 @@
   ]]></description>
 
     <change-notes><![CDATA[
-      <h3>Version 1.0.3</h3>
+      <h3>Version 1.0.4</h3>
       <ul>
-        <li>Added automatic File Nesting for Freezed generated files (<code>.freezed.dart</code>, <code>.g.dart</code>).</li>
+        <li>Minor change</li>
       </ul>
   ]]></change-notes>
 

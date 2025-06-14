@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.dhh"
-version = "1.0.3"
+version = "1.0.4"
 
 repositories {
     mavenCentral()
@@ -30,11 +30,9 @@ intellijPlatform {
         }
 
         changeNotes = """
-            Version 1.0.3
+            Version 1.0.4
             
-            Added automatic File Nesting for Freezed generated files
-            - .freezed.dart
-            - .g.dart
+            Minor change
     """.trimIndent()
     }
 }

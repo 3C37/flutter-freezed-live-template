@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "com.dhh"
-version = "1.0.6"
+version = "1.0.7"
 
 repositories {
     mavenCentral()
@@ -41,7 +41,7 @@ intellijPlatform {
         }
 
         changeNotes = """
-            Version 1.0.6
+            Version 1.0.7
             
             Update templates for Freezed 3.x syntax, migrate stale IDE live template settings, fix live template top-level context persistence, enable file nesting on first startup, and remove unnecessary mandatory Android/Flutter dependencies for 2026.1 verification.
     """.trimIndent()

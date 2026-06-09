@@ -87,6 +87,6 @@ abstract class YourClassName with _$YourClassName {
 
 ## Compatibility
 
-Version `1.0.6` updates templates for Freezed 3.x and migrates stale IDE live template settings from older plugin versions. It also removes unnecessary mandatory Android, Flutter, and Dart plugin dependencies so the plugin can verify cleanly against IntelliJ IDEA 2026.1.
+Version `1.0.7` updates templates for Freezed 3.x and migrates stale IDE live template settings from older plugin versions. It also removes unnecessary mandatory Android, Flutter, and Dart plugin dependencies so the plugin can verify cleanly against IntelliJ IDEA 2026.1.
 
 The plugin only depends on IntelliJ Platform modules and does not require the Flutter/Dart plugins to be installed for JetBrains Marketplace verification.

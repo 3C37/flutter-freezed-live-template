@@ -7,7 +7,7 @@
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
     <name>Flutter Freezed Live Template</name>
 
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
     <vendor url="https://github.com/3C37">3C37</vendor>
 
@@ -26,25 +26,28 @@
   ]]></description>
 
     <change-notes><![CDATA[
-      <h3>Version 1.0.5</h3>
+      <h3>Version 1.0.6</h3>
       <ul>
-        <li>Minor change</li>
+        <li>Updated generated Freezed templates to Freezed 3.x primary constructor syntax.</li>
+        <li>Fixed live template context so the Dart top-level checkbox remains selected.</li>
+        <li>Automatically enables file nesting rules once after plugin installation.</li>
+        <li>Removed unnecessary mandatory Android/Flutter plugin dependencies for IntelliJ IDEA 2026.1 verification.</li>
       </ul>
   ]]></change-notes>
 
-    <idea-version since-build="233" until-build="252.*" />
+    <idea-version since-build="233" until-build="261.*" />
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
-    <depends>org.jetbrains.android</depends>
-    <depends>Dart</depends>
-    <depends>io.flutter</depends>
+    <depends>com.intellij.modules.lang</depends>
 
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
+        <liveTemplateContext contextId="FLUTTER_FREEZED_DART_TOPLEVEL" implementation="com.dhh.flutter_freezed_live_template.live_template.FlutterDartTopLevelContext"/>
         <defaultLiveTemplates file="live_templates/flutter_freezed_live_template.xml"/>
         <projectViewNestingRulesProvider implementation="com.dhh.flutter_freezed_live_template.nesting.FlutterNestingRulesProvider"/>
+        <postStartupActivity implementation="com.dhh.flutter_freezed_live_template.nesting.FlutterFileNestingStartupActivity"/>
     </extensions>
 </idea-plugin>

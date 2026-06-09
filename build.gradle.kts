@@ -1,13 +1,15 @@
+import org.jetbrains.intellij.platform.gradle.IntelliJPlatformType
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     id("java")
-    id("org.jetbrains.kotlin.jvm") version "2.0.0"
-    id("org.jetbrains.intellij.platform") version "2.3.0"
+    id("org.jetbrains.kotlin.jvm") version "2.4.0"
+    id("org.jetbrains.intellij.platform") version "2.16.0"
 }
 
 group = "com.dhh"
-version = "1.0.5"
+version = "1.0.6"
 
 repositories {
     mavenCentral()
@@ -17,41 +19,47 @@ repositories {
 }
 
 dependencies {
+    testImplementation("junit:junit:4.13.2")
+
     intellijPlatform {
-        create("IC", "2023.3")
+        intellijIdea("2026.1.3")
         testFramework(org.jetbrains.intellij.platform.gradle.TestFrameworkType.Platform)
-        plugins("Dart:233.11799.172", "io.flutter:77.0.1", "org.jetbrains.android:233.11799.6")
     }
 }
 
 intellijPlatform {
     pluginVerification {
         ides {
-            recommended()
+            create(IntelliJPlatformType.IntellijIdea, "2026.1.3")
         }
     }
 
     pluginConfiguration {
         ideaVersion {
             sinceBuild = "233"
-            untilBuild = "252.*"
+            untilBuild = "261.*"
         }
 
         changeNotes = """
-            Version 1.0.5
+            Version 1.0.6
             
-            Minor change
+            Update templates for Freezed 3.x syntax, fix live template top-level context persistence, enable file nesting on first startup, and remove unnecessary mandatory Android/Flutter dependencies for 2026.1 verification.
     """.trimIndent()
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_17)
     }
 }
 
 tasks {
     withType<JavaCompile> {
-        sourceCompatibility = "17"
-        targetCompatibility = "17"
+        options.release.set(17)
     }
 
-    kotlin {
+    withType<KotlinCompile> {
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_17)
         }

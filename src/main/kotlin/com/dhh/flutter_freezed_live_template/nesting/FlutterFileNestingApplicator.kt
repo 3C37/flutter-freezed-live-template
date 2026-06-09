@@ -1,5 +1,7 @@
 package com.dhh.flutter_freezed_live_template.nesting
 
+import com.dhh.flutter_freezed_live_template.live_template.FreezedLiveTemplateInstaller
+
 import com.intellij.ide.projectView.ProjectView
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.project.Project
@@ -7,6 +9,8 @@ import com.intellij.openapi.project.Project
 object FlutterFileNestingApplicator {
     fun apply(project: Project): Boolean {
         val settings = ApplicationManager.getApplication().getService(FlutterFileNestingSettings::class.java)
+        FreezedLiveTemplateInstaller.installCurrentTemplatesOnce(settings.state)
+
         val projectView = ProjectView.getInstance(project)
         val controller = object : FileNestingController {
             override var isEnabled: Boolean

@@ -21,5 +21,6 @@ class FlutterFileNestingSettings : PersistentStateComponent<FlutterFileNestingSe
 
     data class State(
         var applied: Boolean = false,
+        var liveTemplatesVersion: Int = 0,
     )
 }

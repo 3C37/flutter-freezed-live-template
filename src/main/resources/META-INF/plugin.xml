@@ -29,6 +29,7 @@
       <h3>Version 1.0.6</h3>
       <ul>
         <li>Updated generated Freezed templates to Freezed 3.x primary constructor syntax.</li>
+        <li>Migrates stale IDE live template settings from older plugin versions on first project startup.</li>
         <li>Fixed live template context so the Dart top-level checkbox remains selected.</li>
         <li>Automatically enables file nesting rules once after plugin installation.</li>
         <li>Removed unnecessary mandatory Android/Flutter plugin dependencies for IntelliJ IDEA 2026.1 verification.</li>

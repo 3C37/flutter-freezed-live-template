@@ -43,7 +43,7 @@ intellijPlatform {
         changeNotes = """
             Version 1.0.6
             
-            Update templates for Freezed 3.x syntax, fix live template top-level context persistence, enable file nesting on first startup, and remove unnecessary mandatory Android/Flutter dependencies for 2026.1 verification.
+            Update templates for Freezed 3.x syntax, migrate stale IDE live template settings, fix live template top-level context persistence, enable file nesting on first startup, and remove unnecessary mandatory Android/Flutter dependencies for 2026.1 verification.
     """.trimIndent()
     }
 }
